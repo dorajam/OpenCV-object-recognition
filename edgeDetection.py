@@ -1,14 +1,13 @@
 # Dora Jambor
 # February 2016 Spring 1's Recurse Center
 
-# Built upon the 'pyimagesearch' opencv tutorials 
+# Based on the 'pyimagesearch' opencv tutorials 
 # http://www.pyimagesearch.com/2014/09/01/build-kick-ass-mobile-document-scanner-just-5-minutes/
 
 '''
-Edge detection with OpenCV - use as a scanner. Prep for MNIST digit recognition
-Three webcam displays: gray and edged
+Edge detection with OpenCV - can be used as a scanner. Prep for MNIST digit recognition
+Two webcam displays: thresh and edged
 '''
-
 
 import numpy as np
 import cv2
@@ -57,13 +56,7 @@ while True:
 				(0, 255, 255), 2)
 			cv2.circle(resized, center, 5, (0, 0, 255), -1)
 
-
-
-	# imshow always goes with waitKey: waitKey displays 
-	# the given frame for 'arg' miliseconds. If it's zero, it displays one frame for an infinite amount of time
-	# if it's 1 it displays each frame for one milisecond- in which it waits for a key event. If key event not given, 
-	# it returns -1 and the window keeps running.
-	cv2.imshow('frames', np.hstack([thresh]))
+	cv2.imshow('frames', np.hstack([thresh, edged]))
 
 	# ord is to convert string to int
 	key = cv2.waitKey(25) & 0xFF 
@@ -71,4 +64,3 @@ while True:
 		break
 
 cv2.destroyAllWindows()
-
