@@ -1,10 +1,14 @@
-## OpenCV-object-recognition-
-Recurse Center project: skin recognition, edge detection etc.
+## OpenCV-object-recognition
+#### Skin recognition and edge detection
 
-This was my first project at the Recurse Center. It is more of an experimentation of how accurate OpenCV is to detect objects.
+This is an experimentation of the OpenCV library to detect objects 
 
-My vision was to control my mousepad with gesture recognition. This is done by tracking certain colored objects through the camera and connecting that to the mouse.
-Since the color detection is a very sensitive way of tracking objects I moved onto implementing things from scratch and do the same things with a neural network.
+My goal was to control my mousepad by gesture recognition through the webcamera, without using any external hardware.
+
+In OpenCV, this is normally done by specifying a color range, and then by **_hoping_** that your webcam will detect the object of the corresponding color.    
+You can imagine that this is not the most robust way of doing gesture recognition. Since indeed the color detection was highly sensitive to external circumstances, I decided to implement things from scratch and do the same things with neural networks.
+     
+Some of the things that came out of this will be posted below _soon_.
 
 
 
